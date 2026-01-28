@@ -63,8 +63,6 @@ public sealed class FallenRampFix : BasePlugin
         _categorizePositionHookGuid = _categorizePositionFunc.AddHook(HookCategorizePosition);
 
         Core.Event.OnMovementServicesRunCommandHook += OnMovementServicesRunCommand;
-
-        Console.WriteLine("[FallenRampFix] Plugin loaded successfully");
     }
 
     public override void Unload()
@@ -73,8 +71,6 @@ public sealed class FallenRampFix : BasePlugin
 
         _tryPlayerMoveFunc?.RemoveHook(_tryPlayerMoveHookGuid);
         _categorizePositionFunc?.RemoveHook(_categorizePositionHookGuid);
-
-        Console.WriteLine("[FallenRampFix] Plugin unloaded");
     }
 
     private void OnMovementServicesRunCommand(IOnMovementServicesRunCommandHookEvent @event)

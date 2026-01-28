@@ -7,7 +7,7 @@ using SwiftlyS2.Shared.Events;
 using SwiftlyS2.Shared.SchemaDefinitions;
 namespace FallenRampFix;
 
-[PluginMetadata(Id = "FallenRampFix", Version = "1.0.0", Name = "FallenRampFix", Author = "zer0.k, Interesting-exe, rcnoob, Nukoooo, ported by Slime to SwiftlyS2")]
+[PluginMetadata(Id = "FallenRampFix", Version = "1.0.1", Name = "FallenRampFix", Author = "zer0.k, Interesting-exe, rcnoob, Nukoooo, ported by Slime to SwiftlyS2")]
 public sealed class FallenRampFix : BasePlugin
 {
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]

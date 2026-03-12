@@ -7,7 +7,7 @@ using SwiftlyS2.Shared.Events;
 using SwiftlyS2.Shared.SchemaDefinitions;
 namespace FallenRampFix;
 
-[PluginMetadata(Id = "FallenRampFix", Version = "1.0.1", Name = "FallenRampFix", Author = "zer0.k, Interesting-exe, rcnoob, Nukoooo, ported by Slime to SwiftlyS2")]
+[PluginMetadata(Id = "FallenRampFix", Version = "1.0.2", Name = "FallenRampFix", Author = "zer0.k, Interesting-exe, rcnoob, Nukoooo, ported by Slime to SwiftlyS2")]
 public sealed class FallenRampFix : BasePlugin
 {
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -33,7 +33,7 @@ public sealed class FallenRampFix : BasePlugin
 
     private const float RAMP_BUG_THRESHOLD = 0.98f;
     private const float RAMP_BUG_VELOCITY_THRESHOLD = 0.95f;
-    private const float RAMP_PIERCE_DISTANCE = 0.0625f;
+    private const float RAMP_PIERCE_DISTANCE = 0.15f;
     private const float NEW_RAMP_THRESHOLD = 0.95f;
     private const float FLT_EPSILON = 1.19209e-07f;
 

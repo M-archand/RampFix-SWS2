@@ -1,0 +1,14 @@
+# Dot-product threshold for detecting a ramp-bug: normals closer than this are
+# treated as the same surface. Lower = more aggressive correction.
+RampBugThreshold = 0.98
+
+# Velocity ratio below which a post-TPM velocity change triggers the position
+# restore. Lower = more situations trigger the restore.
+RampBugVelocityThreshold = 0.95
+
+# Distance (in units) to pierce into the ramp when searching for a valid plane.
+# Higher = searches deeper into geometry.
+RampPierceDistance = 0.0625
+
+# Dot-product threshold for accepting a pierce hit as a new valid ramp plane.
+NewRampThreshold = 0.95

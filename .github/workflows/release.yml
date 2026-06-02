@@ -52,7 +52,7 @@ jobs:
           echo "Found zip: $ZIP_SRC"
 
           mkdir -p release-artifacts
-          NEW_NAME="v${VERSION}.zip"
+          NEW_NAME="RampFix-v${VERSION}.zip"
           mv "$ZIP_SRC" "release-artifacts/$NEW_NAME"
           echo "artifact=release-artifacts/$NEW_NAME" >> $GITHUB_OUTPUT
           echo "Prepared: $NEW_NAME"
@@ -66,7 +66,7 @@ jobs:
           REPO_NAME="${{ github.event.repository.name }}"
           BASE_TAG="v${VERSION}"
           TAG="$BASE_TAG"
-          TITLE="${REPO_NAME} | ${BASE_TAG}"
+          TITLE="${BASE_TAG}"
           BUILD_NUM=1
 
           while gh release view "$TAG" &>/dev/null; do

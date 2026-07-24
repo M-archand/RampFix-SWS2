@@ -652,10 +652,15 @@ public sealed class FallenRampFix : BasePlugin
         return true;
     }
 
+    // TracePlayerBBox now takes 6 args, using this as a workaround until fixed by Swiftly
     private void TracePlayerBBox(in Vector start, in Vector end, in BBox_t bbox, ref CGameTrace trace)
     {
+        var ray = new Ray_t();
+        ray.Init(bbox.Mins, bbox.Maxs);
+        _playerTraceParams.Ray = ray;
+
         TraceParams? param = _playerTraceParams;
-        var r = _core.Trace.TracePlayerBBox(in start, in end, in bbox, in param);
+        var r = _core.Trace.TraceShapeLine(in start, in end, in param);
         CopyTrace(in r, ref trace);
     }
 

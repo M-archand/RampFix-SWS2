@@ -12,7 +12,7 @@ using Tomlyn;
 
 namespace RampFix;
 
-[PluginMetadata(Id = "RampFix", Version = "1.0.0", Name = "RampFix", Author = "Marchand")]
+[PluginMetadata(Id = "RampFix", Version = "1.0.1", Name = "RampFix", Author = "Marchand")]
 public sealed class FallenRampFix : BasePlugin
 {
     // tpm = TryPlayerMove
